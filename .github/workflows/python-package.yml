@@ -1,0 +1,15 @@
+name: 디스코드 알림봇
+
+on:
+  schedule: # UTC+9 기준 3시 실행
+    - cron:  "35 1 * * *"
+
+jobs:
+  message:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${https://discord.com/api/webhooks/1306791736676319283/wGKkH01u9OrHn6vXC42qHkseENnnGX0SCtOs58XF1uPIQ2NJ1gTKf79USeMRSU5XTKnj}
+        content: "써티 주간보고 작성 필요"

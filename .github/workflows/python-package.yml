@@ -11,5 +11,5 @@ jobs:
     - name: Discord Webhook Action
       uses: tsickert/discord-webhook@v5.3.0
       with:
-        webhook-url: ${${{ secrets.DISCORD }}}
+        webhook-url: ${{ secrets.DISCORD }}
         content: "써티 주간보고 작성 필요"
